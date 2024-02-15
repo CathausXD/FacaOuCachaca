@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Faça ou cachaça</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo" class="logofixa">
+            <a href="index.html">
+                <img src="pics/Logo.png">
+            </a>
+        </div>
+    </nav>
+    <main>
+    <div class="container">
+        <ul id="cards">
+            <li class="card" id="card1">
+                <div class="card-body">
+                    <div class="descricao">
+                        <h1>Reis</h1>
+                        <h2>É um jogo de cartas onde cada carta do baralho tem uma regra associada, e os jogadores devem seguir as regras quando a carta é
+                        jogada.</h2>
+                        <a href="reis/reis.html"><img src="image/desceuma.svg"></a>
+                    </div>
+                    <div class="jogo"><img src="image/Reis.svg"></div>
+                </div>
+            </li>
+            <li class="card" id="card2">
+                <div class="card-body">
+                    <div class="descricao">
+                        <h1>Eu Nunca</h1>
+                        <h2>É um jogo onde os participantes fazem declarações começando com "Eu
+                        nunca..." seguidas de algo que nunca fizeram. Se algum dos outros jogadores já fez o que foi dito, eles devem beber. O
+                        jogo continua com os jogadores fazendo declarações e bebendo conforme necessário, com o objetivo de compartilhar
+                        experiências de uma forma descontraída e divertida.</h2>
+                        <a href=""><img src="image/desceuma.svg"></a>
+                    </div>
+                    <div class="jogo"><img src="image/Eu nunca.svg"></div>
+                </div>
+            </li>
+            <li class="card" id="card3">
+                <div class="card-body">
+                    <div class="descricao">
+                        <h1>Desafio do Rubor</h1>
+                        <h2>É um jogo onde os jogadores tentam responder de forma criativa ou honesta perguntas embaraçosas e sem ficarem
+                        ruborizados. Aqueles que não conseguirem responder ou mostrarem sinais de rubor têm que beber. O jogo acaba quando todas as cartas tenham sido usadas. No final, o jogador com menos vezes de beber é considerado o vencedor.</h2>
+                        <a href=""><img src="image/desceuma.svg"></a>
+                    </div>
+                    <div class="jogo"><img src="image/Desafio do rubor.svg"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </main>
+
+    <script>
+        window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (window.scrollY > 75) {
+                    document.getElementById("logo").classList.add("logopequena");
+                } else {
+                    document.getElementById("logo").classList.remove("logopequena");
+                }
+            }
+    </script>
+    <script>
+        window.addEventListener('resize', function () {
+            if (window.innerWidth < 550) {
+                document.querySelectorAll('.card').forEach(function (card) {
+                    var jogoImgSrc = card.querySelector('.jogo img').src;
+                    card.querySelector('.card-body').style.backgroundImage = "url('" + jogoImgSrc + "')";
+                    card.querySelector('.jogo img').style.display = "none";
+                });
+            } else {
+                document.querySelectorAll('.card').forEach(function (card) {
+                    card.querySelector('.card-body').style.backgroundImage = "none";
+                    card.querySelector('.jogo img').style.display = "block";
+                });
+            }
+        });
+        window.dispatchEvent(new Event('resize'));
+    </script>
+</body>
