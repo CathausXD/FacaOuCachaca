@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-    --cards: 3;
+    --cards: 4;
     --cardHeight: 87vh;
     --cardTopPadding: 2em;
     --cardMargin: 4vw;
@@ -86,6 +86,10 @@ body {
     --index: 4;
 }
 
+#card4 {
+    --index: 5;
+}
+
 .card {
     position: sticky;
     top: 0;
@@ -159,6 +163,11 @@ body {
 
 #card3 .card-body {
     background-color: #9CADCE;
+    border: solid 5px white;
+}
+
+#card4 .card-body {
+    background-color: #c4d61d;
     border: solid 5px white;
 }
 
