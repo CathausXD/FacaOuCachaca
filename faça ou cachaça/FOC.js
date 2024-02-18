@@ -1,4 +1,3 @@
-// Array de mensagens
 const mensagens = [
   "1.Compartilhe a foto de alguém nos stories ou CACHAÇA",
   "2.Comente algo na última publicação da primeira pessoa que aparecer no feed do Instagram ou CACHAÇA",
@@ -52,12 +51,14 @@ const mensagens = [
   "50.Faça uma ligação para um amigo e tente convencê-lo a participar do jogo ou CACHAÇA",
 ];
 
-// Array para armazenar as mensagens já utilizadas
 let mensagensUtilizadas = [];
 
-// Função para gerar uma mensagem aleatória
+let jogadorAtual = 0;
+
+const nomes = JSON.parse(localStorage.getItem("nomes"));
+const cores = JSON.parse(localStorage.getItem("cores"));
+
 function gerarMensagem() {
-  // Verificar se todas as mensagens foram utilizadas
   if (mensagensUtilizadas.length === mensagens.length) {
     document.getElementById("mensagem").textContent =
       "Todas os desafios foram usadas!";
@@ -70,9 +71,23 @@ function gerarMensagem() {
     mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
   } while (mensagensUtilizadas.includes(mensagemAleatoria));
 
-  // Atualizar o texto do elemento <div> com a mensagem escolhida
-  document.getElementById("mensagem").textContent = mensagemAleatoria;
+  const nomeJogador = nomes[jogadorAtual]; // Obter o nome do jogador atual
+  const corJogadorAtual = cores[jogadorAtual]; // Obter a cor escolhida pelo jogador atual
 
-  // Adicionar a mensagem utilizada ao array de mensagens
+  document.getElementById("mensagem").textContent = mensagemAleatoria;
+  document.getElementById("nomeJogador").textContent = `Vez de: ${nomeJogador}`;
+
+  const numeroDiv = document.querySelector(".jogador");
+  numeroDiv.className = "jogador " + corJogadorAtual;
+
+  const cardDiv = document.querySelector(".card");
+  cardDiv.className = "card " + corJogadorAtual;
+
+  jogadorAtual = (jogadorAtual + 1) % nomes.length;
+
   mensagensUtilizadas.push(mensagemAleatoria);
+
+  console.log("Mensagens Utilizadas:", mensagensUtilizadas);
+  console.log("Nomes:", nomes);
+  console.log("Cores dos Jogadores:", cores);
 }

@@ -64,7 +64,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 15px;
+}
+
+.baralho .jogador {
+    border: 0 solid white;
+    box-shadow: 0 0 0px 0 white;
+    z-index: 100;
+}
+
+.jogador {
+    color: #ffffff;
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: calc(1vw + 1vh);
+    padding: 2px 25px;
+    border-radius: 20px 20px 0 0;
 }
 
 .baralho button {
@@ -100,6 +115,66 @@ main {
     color: white;
     font-size: calc(1vw + 1.5vh);
     padding: 25px;
+}
+
+.vermelho {
+    color: red;
+    border: 5px solid red;
+    box-shadow: 0 0 30px 0 red;
+}
+
+.verde {
+    color: green;
+    border: 5px solid green;
+    box-shadow: 0 0 30px 0 green;
+}
+
+.azul {
+    color: blue;
+    border: 5px solid blue;
+    box-shadow: 0 0 30px 0 blue;
+}
+
+.amarelo {
+    color: yellow;
+        border: 5px solid yellow;
+        box-shadow: 0 0 30px 0 yellow;
+}
+
+.ciano {
+    color: cyan;
+    border: 5px solid cyan;
+    box-shadow: 0 0 30px 0 cyan;
+}
+
+.magenta {
+    color: magenta;
+    border: 5px solid magenta;
+    box-shadow: 0 0 30px 0 magenta;
+}
+
+.branco {
+    color: white;
+    border: 5px solid white;
+    box-shadow: 0 0 30px 0 white;
+}
+
+.laranja {
+    color: orange;
+    border: 5px solid orange;
+    box-shadow: 0 0 30px 0 orange;
+}
+
+.rosa {
+    color: pink;
+    border: 5px solid pink;
+    box-shadow: 0 0 30px 0 pink;
+}
+
+.roxo {
+    color: purple;
+    border: 5px solid purple;
+    box-shadow: 0 0 30px 0 purple;
 }
 
 :root {

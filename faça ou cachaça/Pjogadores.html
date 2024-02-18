@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <title>Faça ou cachaça</title>
-    <link rel="stylesheet" href="FOC.css">
+    <link rel="stylesheet" href="Pjogadores.css">
 </head>
 
 <body>
@@ -22,14 +22,14 @@
         </div>
     </nav>
     <main>
-        <div class="baralho">
-            <div id="nomeJogador" class="jogador">Who?</div>
-            <div class="card">
-                    <div id="mensagem" class="mensagem">Preparados!?</div>
-            </div>
-            <div>
-                <button onclick="gerarMensagem()">Gerar Carta</button>
-            </div>
+        <div class="config">
+            <h1>Configuração do Jogo</h1>
+            <label for="numJogadores">Número de Jogadores:</label>
+            <input type="number" id="numJogadores" min="1" max="10" value="1"><br><br>
+        
+            <div id="nomesJogadores" class="lista"></div>
+        
+            <button onclick="adicionarNomes()">Adicionar Nomes</button>
         </div>
     </main>
 
@@ -37,7 +37,7 @@
 
 
 
-    <script src="FOC.js"></script>
+    <script src="Pjogadores.js"></script>
 
 </body>
 
