@@ -1,0 +1,188 @@
+body {
+    background-color: #111111;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+    font-family: knick;
+    src: url(/fontes/knicknack/Knicknack-Regular.ttf);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logofixa {
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #000;
+    border-bottom: 5px solid white;
+    transition: all 1s ease;
+}
+
+.logofixa a {
+    display: flex;
+    justify-content: center;
+}
+
+.logofixa img {
+    max-width: 80%;
+    max-height: 100px;
+    padding: 0 20px;
+}
+
+.logofixa img,
+.logopequena img {
+    transition: all 1s ease;
+}
+
+.logopequena {
+    position: fixed;
+    top: 0;
+    width: 30%;
+    z-index: 100;
+    border: 5px solid white;
+    border-top: none;
+    border-radius: 0px 0px 50px 50px;
+    padding-inline: 20px;
+}
+
+.logopequena img {
+    max-width: 100%;
+    max-height: 70px;
+}
+
+.baralho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.baralho .jogador {
+    border: 0 solid white;
+    box-shadow: 0 0 0px 0 white;
+    z-index: 100;
+}
+
+.jogador {
+    color: #ffffff;
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: calc(1vw + 1vh);
+    padding: 2px 25px;
+    border-radius: 20px 20px 0 0;
+}
+
+.baralho button {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: calc(1vw + 2vh);
+    margin-top: 25px;
+    border-radius: 25px;
+    background: black;
+    border: 5px solid #ffffff;
+    padding: 10px 20px;
+    transition: border, color, background-color .5s ease;
+}
+
+.baralho button:hover {
+    color: black;
+    background: white;
+    border: 5px solid black;
+}
+
+.card {
+    width: calc(var(--width) + 7vw);
+    aspect-ratio: 2 / 3;
+    border: 5px solid #fff;
+    border-radius: 25px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .mensagem {
+    color: white;
+    font-size: calc(1vw + 2vh);
+    padding: 25px;
+}
+
+.vermelho {
+    color: red;
+    border: 5px solid red;
+    box-shadow: 0 0 30px 0 red;
+}
+
+.verde {
+    color: green;
+    border: 5px solid green;
+    box-shadow: 0 0 30px 0 green;
+}
+
+.azul {
+    color: blue;
+    border: 5px solid blue;
+    box-shadow: 0 0 30px 0 blue;
+}
+
+.amarelo {
+    color: yellow;
+        border: 5px solid yellow;
+        box-shadow: 0 0 30px 0 yellow;
+}
+
+.ciano {
+    color: cyan;
+    border: 5px solid cyan;
+    box-shadow: 0 0 30px 0 cyan;
+}
+
+.magenta {
+    color: magenta;
+    border: 5px solid magenta;
+    box-shadow: 0 0 30px 0 magenta;
+}
+
+.branco {
+    color: white;
+    border: 5px solid white;
+    box-shadow: 0 0 30px 0 white;
+}
+
+.laranja {
+    color: orange;
+    border: 5px solid orange;
+    box-shadow: 0 0 30px 0 orange;
+}
+
+.rosa {
+    color: pink;
+    border: 5px solid pink;
+    box-shadow: 0 0 30px 0 pink;
+}
+
+.roxo {
+    color: purple;
+    border: 5px solid purple;
+    box-shadow: 0 0 30px 0 purple;
+}
+
+:root {
+    --width: 300px;
+}
+
+@media (max-width: 550px) {
+    .logopequena {
+        width: 60%;
+    }
+}

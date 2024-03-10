@@ -65,14 +65,14 @@ function gerarMensagem() {
     return;
   }
 
-  // Escolha aleatória de uma mensagem não utilizada
+ 
   let mensagemAleatoria;
   do {
     mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
   } while (mensagensUtilizadas.includes(mensagemAleatoria));
 
-  const nomeJogador = nomes[jogadorAtual]; // Obter o nome do jogador atual
-  const corJogadorAtual = cores[jogadorAtual]; // Obter a cor escolhida pelo jogador atual
+  const nomeJogador = nomes[jogadorAtual];
+  const corJogadorAtual = cores[jogadorAtual];
 
   document.getElementById("mensagem").textContent = mensagemAleatoria;
   document.getElementById("nomeJogador").textContent = `Vez de: ${nomeJogador}`;
@@ -86,8 +86,4 @@ function gerarMensagem() {
   jogadorAtual = (jogadorAtual + 1) % nomes.length;
 
   mensagensUtilizadas.push(mensagemAleatoria);
-
-  console.log("Mensagens Utilizadas:", mensagensUtilizadas);
-  console.log("Nomes:", nomes);
-  console.log("Cores dos Jogadores:", cores);
 }
