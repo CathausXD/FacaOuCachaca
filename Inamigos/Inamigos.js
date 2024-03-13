@@ -43,7 +43,7 @@ const mensagens = [
   "42.Quem é mais biscoiteiro(a)?",
   "43.Quem seria capaz de ficar com crush do(a) amigo(a)?",
   "44.Quem guarda o seu pior segredo?",
-  "45.O último a perder o bv é?",
+  "45.O último a perder o bv foi?",
   "46.Qual de nós provavelmente seria cancelado por causa desse jogo?",
   "47.Quem se capaz de fingir que gosta de algo só para conquistar alguém?",
   "48.Quem seria mais provável a criar um perfil falso em um aplicativo de namoro para testar a fidelidade do parceiro(a)?",
