@@ -8,7 +8,7 @@ const mensagens = [
   "7.Vazou todas nossas conversas, quem provavelmente seria cancelado?",
   "8.Estamos BBB, quem seria o mais rejeitado pelo público?",
   "9.Estamos num apocalipse zumbi, quem vai ser o primeiro a morrer?",
-  "10.Qual de nós provavelmente convidaria o grupo para una orgia?",
+  "10.Qual de nós provavelmente convidaria o grupo para uma orgia?",
   "11.Quem ri quando assiste jogos paralímpicos?",
   "12.Quem é a pessoa que tem mais cara que trairia o(a) namorado(a)?",
   "13.Quem do grupo se veste pior?",
