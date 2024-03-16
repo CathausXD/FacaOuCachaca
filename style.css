@@ -11,7 +11,7 @@ body {
 
 :root {
     --cards: 4;
-    --cardHeight: 85vh;
+    --cardHeight: 83vh;
     --cardTopPadding: 1em;
     --cardMargin: 4vw;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 #card4 {
-    --index: 3;
+    --index: 2;
 }
 
 .card {
