@@ -87,6 +87,7 @@ main {
     font-family: "Poppins", sans-serif;
     font-size: calc(1vw + 2vh);
     margin-top: 25px;
+    margin-inline: 10px;
     border-radius: 25px;
     background: black;
     border: 5px solid #ffffff;
@@ -94,10 +95,39 @@ main {
     transition: border, color, background-color .5s ease;
 }
 
+.baralho #BtGC{
+    display: none;
+}
+
+.baralho #Bt51{
+    border: 5px solid green;
+}
+
+.baralho #Bt101 {
+    border: 5px solid red;
+}
+
+.baralho .resetar button{
+    color: red;
+    border: 5px solid red;
+}
+
+.baralho .resetar button:hover {
+    color: white;
+    background: red;
+    border: 5px solid white;
+}
+
 .baralho button:hover {
     color: black;
     background: white;
     border: 5px solid black;
+}
+
+.baralho .resetar {
+    position: absolute;
+    top: 85%;
+    right: 0vw;
 }
 
 .card {
@@ -115,66 +145,6 @@ main {
     color: white;
     font-size: calc(1vw + 2vh);
     padding: 25px;
-}
-
-.vermelho {
-    color: red;
-    border: 5px solid red;
-    box-shadow: 0 0 30px 0 red;
-}
-
-.verde {
-    color: green;
-    border: 5px solid green;
-    box-shadow: 0 0 30px 0 green;
-}
-
-.azul {
-    color: blue;
-    border: 5px solid blue;
-    box-shadow: 0 0 30px 0 blue;
-}
-
-.amarelo {
-    color: yellow;
-        border: 5px solid yellow;
-        box-shadow: 0 0 30px 0 yellow;
-}
-
-.ciano {
-    color: cyan;
-    border: 5px solid cyan;
-    box-shadow: 0 0 30px 0 cyan;
-}
-
-.magenta {
-    color: magenta;
-    border: 5px solid magenta;
-    box-shadow: 0 0 30px 0 magenta;
-}
-
-.branco {
-    color: white;
-    border: 5px solid white;
-    box-shadow: 0 0 30px 0 white;
-}
-
-.laranja {
-    color: orange;
-    border: 5px solid orange;
-    box-shadow: 0 0 30px 0 orange;
-}
-
-.rosa {
-    color: pink;
-    border: 5px solid pink;
-    box-shadow: 0 0 30px 0 pink;
-}
-
-.roxo {
-    color: purple;
-    border: 5px solid purple;
-    box-shadow: 0 0 30px 0 purple;
 }
 
 :root {
