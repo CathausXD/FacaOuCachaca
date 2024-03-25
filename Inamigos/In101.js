@@ -54,24 +54,40 @@ const mensagens = [
 
 let mensagensUtilizadas =
   JSON.parse(localStorage.getItem("mensagensUtilizadas")) || [];
+let ultimaMensagemExibida = localStorage.getItem("ultimaMensagemExibida") || "";
 
 function gerarMensagem() {
-  if (mensagensUtilizadas.length === mensagens.length) {
-    document.getElementById("mensagem").textContent =
-      "Todas os desafios foram usadas!";
-    return;
-  }
-
   let mensagemAleatoria;
-  do {
-    mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
-  } while (mensagensUtilizadas.includes(mensagemAleatoria));
+
+  // Verifica se todas as mensagens foram utilizadas
+  if (mensagensUtilizadas.length === mensagens.length) {
+    mensagemAleatoria = "Todas os desafios foram usadas!";
+  } else {
+    // Gera uma mensagem aleatória que não foi utilizada ainda
+    do {
+      mensagemAleatoria =
+        mensagens[Math.floor(Math.random() * mensagens.length)];
+    } while (mensagensUtilizadas.includes(mensagemAleatoria));
+  }
 
   document.getElementById("mensagem").textContent = mensagemAleatoria;
 
-  mensagensUtilizadas.push(mensagemAleatoria);
-  localStorage.setItem(
-    "mensagensUtilizadas",
-    JSON.stringify(mensagensUtilizadas)
-  );
+  // Atualiza a última mensagem exibida no localStorage
+  ultimaMensagemExibida = mensagemAleatoria;
+  localStorage.setItem("ultimaMensagemExibida", ultimaMensagemExibida);
+
+  if (mensagemAleatoria !== "Todas os desafios foram usadas!") {
+    mensagensUtilizadas.push(mensagemAleatoria);
+    localStorage.setItem(
+      "mensagensUtilizadas",
+      JSON.stringify(mensagensUtilizadas)
+    ); // Salva as mensagens utilizadas no localStorage
+  }
 }
+
+// Chama a função para gerar a mensagem ao carregar a página
+if (ultimaMensagemExibida) {
+  document.getElementById("mensagem").textContent = ultimaMensagemExibida;
+}
+// Adiciona um evento de clique ao botão para gerar uma nova mensagem
+document.getElementById("gerarBtn").addEventListener("click", gerarMensagem);
